@@ -19,6 +19,63 @@
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	</head>
 	<body>
+		<!-- Modal -->
+		<div id="myModal" class="modal">
+			<div class="modal__card">
+				<div class="modal__card--header">
+					<span class="modal-close">&times;</span>
+					<h3>Register to our waitlist</h3>
+					<p>
+						If you are interested in trying this service, please fill in this
+						information and we will contact you when the first version is
+						released.
+					</p>
+				</div>
+				<div class="modal__card--form">
+					<form>
+						<label for="getName" class="modal-label">Your name</label><br />
+						<input
+							class="modal-input"
+							type="text"
+							id="getName"
+							placeholder="Write here"
+						/>
+						<fieldset>
+							<legend>I am...</legend>
+							<p>
+								<label>
+									<input type="radio" name="users" value="aClient" checked /> A
+									client
+								</label>
+							</p>
+							<p>
+								<label>
+									<input type="radio" name="users" value="BusinessOwner" />
+									Business owner
+								</label>
+							</p>
+							<p>
+								<label>
+									<input type="radio" name="users" value="aEmployee" /> Employee
+								</label>
+							</p>
+						</fieldset>
+						<label for="getGmail" class="modal-label">Your email</label><br />
+						<input
+							class="modal-input"
+							type="email"
+							id="getGmail"
+							placeholder="Write here"
+						/>
+						<br />
+						<div>
+							<button>Register now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Header -->
 		<header id="header" class="hero-nav">
 			<nav class="nav container">
 				<div class="nav__menu">
@@ -154,7 +211,7 @@
 					</h2>
 				</div>
 				<div class="container">
-					<div class="features-1" data-aos="fade-left" data-aos-duration="1000">
+					<div class="features-1" data-aos="fade-up" data-aos-duration="1000">
 						<img
 							src="./img/HomeMockup.png"
 							alt="This is a mockup of our home app"
@@ -223,7 +280,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="features-3" data-aos="fade-left" data-aos-duration="1000">
+					<div class="features-3" data-aos="fade-up" data-aos-duration="1000">
 						<img
 							src="./img/ReservationMockup.png"
 							alt="This is a mockup of our reservation page app"

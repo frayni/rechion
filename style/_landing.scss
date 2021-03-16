@@ -35,7 +35,8 @@
 			> a {
 				cursor: pointer;
 				opacity: 0.5;
-                font: 500 $text-large map-get($colors-basic, "black1");
+                font: 600 $text-large $font;
+				color: map-get($colors-basic, "black1");
 				margin-top: 16px;
 				&:hover {
 					transition-duration: 300ms;

@@ -24,7 +24,7 @@ section {
   margin-bottom: 84px;
 }
 
-.btn, .btn__primary, .btn__primary--fill, .hero-message-cta > button, .final-cta-content button, .btn__primary--opacity, .nav-links > button, .btn__white, .btn__white--outline, .footer-links button {
+.btn, .btn__primary, .btn__primary--fill, .modal__card--form div button, .hero-message-cta > button, .final-cta-content button, .btn__primary--opacity, .nav-links > button, .btn__white, .btn__white--outline, .footer-links button {
   display: inline-block;
   cursor: pointer;
   padding: 12px 24px;
@@ -32,12 +32,12 @@ section {
   font-weight: 600;
 }
 
-.btn__primary--fill, .hero-message-cta > button, .final-cta-content button {
+.btn__primary--fill, .modal__card--form div button, .hero-message-cta > button, .final-cta-content button {
   background-color: #2424FF;
   color: white;
 }
 
-.btn__primary--fill:hover, .hero-message-cta > button:hover, .final-cta-content button:hover {
+.btn__primary--fill:hover, .modal__card--form div button:hover, .hero-message-cta > button:hover, .final-cta-content button:hover {
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
   background-color: #1919b3;
@@ -202,6 +202,121 @@ section {
   margin-top: 12px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-label, .modal__card--form fieldset legend {
+  color: #0E1E25;
+  font-size: clamp(1rem, 5vw, 18px);
+  font-weight: 600;
+}
+
+.modal-input {
+  margin-top: 12px;
+  padding: 12px 0 12px 16px;
+  border: 2px solid #CDCDCD;
+  border-radius: 8px;
+  width: 96%;
+}
+
+.modal-input:focus, .modal-input:hover {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  background-color: #FAFAFA;
+  border: 2px solid #2424FF;
+}
+
+.modal-close {
+  color: #CDCDCD;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-close:hover, .modal-close:focus {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  color: #EF233C;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__card {
+  padding: 20px 16px;
+  background-color: white;
+  border-radius: 12px;
+  margin: 3% auto;
+  width: 80%;
+}
+
+.modal__card--header h3 {
+  font-size: clamp(18px, 5vw, clamp(1.5rem, 5vw, 1.75rem));
+  color: #0E1E25;
+  font-weight: bold;
+}
+
+.modal__card--header p {
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  margin: 12px 0;
+  line-height: 1.6;
+  color: rgba(14, 30, 37, 0.6);
+}
+
+.modal__card--form fieldset {
+  margin: 18px 0;
+}
+
+.modal__card--form fieldset legend {
+  margin-bottom: 16px;
+}
+
+.modal__card--form fieldset input[type="radio"] {
+  background-color: initial;
+  cursor: default;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-right: 4px;
+  width: 1rem;
+  height: 1rem;
+}
+
+.modal__card--form fieldset p {
+  margin-bottom: 12px;
+}
+
+.modal__card--form fieldset label {
+  font-weight: 500;
+  color: #0E1E25;
+  cursor: pointer;
+}
+
+.modal__card--form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal__card--form div button {
+  margin-top: 12px;
+  width: 50%;
+  text-align: center;
+}
+
 @media screen and (min-width: 668px) {
   .container {
     margin: 0 50px;
@@ -273,6 +388,9 @@ section {
   .footer-links button {
     margin: unset;
   }
+  .modal__card {
+    max-width: 380px;
+  }
 }
 
 .hero-nav {
@@ -322,7 +440,8 @@ section {
 .hero-message-cta > a {
   cursor: pointer;
   opacity: 0.5;
-  font: 500 18px #0E1E25;
+  font: 600 18px inter;
+  color: #0E1E25;
   margin-top: 16px;
 }
 

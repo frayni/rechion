@@ -140,6 +140,104 @@ section {
 		}
 	}
 }
+// Modal
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+	&-label {
+		color: map-get($colors-basic, "black1");
+		font-size: clamp($text, 5vw, $text-large);
+		font-weight: 600;
+	}
+	&-input {
+		margin-top: 12px;
+		padding: 12px 0 12px 16px;
+		border: 2px solid map-get($colors-basic, "gray2");
+		border-radius: 8px;
+		width: 96%;
+		&:focus,
+		&:hover {
+			transition-duration: 300ms;
+			background-color: map-get($colors-basic, "bg3");
+			border: 2px solid map-get($colors, "primary");
+		}
+	}
+	&-close {
+		color: map-get($colors-basic, "gray2" );
+		float: right;
+		font-size: 24px;
+		font-weight: bold;
+		&:hover, &:focus {
+			transition-duration: 300ms;
+			color: map-get($colors-accent, "red" );
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+	&__card {
+		padding: 20px 16px;
+		background-color: white;
+		border-radius: 12px;
+		margin: 3% auto;
+		width: 80%;
+		&--header {
+			h3 {
+				font-size: clamp($text-large, 5vw, $heading3);
+				color: map-get($colors-basic, "black1");
+				font-weight: bold;
+			}
+			p {
+				font-size: clamp($text-small, 3vw, $text);
+				margin: 12px 0;
+				line-height: 1.6;
+				color: rgba(14, 30, 37, 0.6);
+			}
+		}
+		&--form {
+			fieldset {
+				margin: 18px 0;
+				legend {
+					@extend .modal-label;
+					margin-bottom: 16px;
+				}
+				input[type="radio"] {
+					background-color: initial;
+					cursor: default;
+					appearance: auto;
+					box-sizing: border-box;
+					margin-right: 4px;
+					width: 1rem;
+					height: 1rem;
+				}
+				p {
+					margin-bottom: 12px;
+				}
+				label {
+					font-weight: 500;
+					color: map-get($colors-basic, "black1");
+					cursor: pointer;
+				}
+			}
+			div {
+				display: flex;
+				justify-content: center;
+				button {
+					@extend .btn__primary--fill;
+					margin-top: 12px;
+					width: 50%;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
 
 // Responsive
 @media screen and (min-width: $largeScreen) {
@@ -188,4 +286,10 @@ section {
 			}
 		}
     }
+	// Modal
+	.modal {
+		&__card {
+			max-width: 380px;
+		}
+	}
 }
