@@ -1,0 +1,20 @@
+// Reset
+* {
+    all: unset;
+    display: revert;
+    &::before, &::after {
+        box-sizing: border-box;
+    }
+}
+html, body {
+    font-size: 16px;
+    font-family: 'Inter', Courier, monospace;
+    max-width: 1440px;
+    margin-inline: auto;
+    scroll-behavior: smooth;
+}
+
+// Importing
+@import 'variables';
+@import 'base';
+@import 'landing';
