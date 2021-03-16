@@ -548,4 +548,187 @@ section {
 .final-cta-mockup {
   display: none;
 }
+
+@media screen and (min-width: 668px) {
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: unset;
+    margin-inline: clamp(10px, 50%, 50px);
+  }
+  .hero-message {
+    width: 50%;
+  }
+  .hero-message > h1 {
+    max-width: 505px;
+  }
+  .hero-message > p {
+    max-width: 500px;
+    padding-left: 16px;
+    border-left: 2px solid #FCCA46;
+  }
+  .hero-message-cta {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .hero-message-cta > a {
+    margin: 0 0 0 1rem;
+  }
+  .hero-mockup {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero-mockup-c1 {
+    top: 0;
+    right: 80px;
+  }
+  .hero-mockup-c2 {
+    bottom: 10px;
+    left: 100px;
+  }
+  .us {
+    text-align: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+    margin-inline: 5%;
+  }
+  .us-message {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding-left: 32px;
+  }
+  .us-message > h4,
+  .us-message h2,
+  .us-message p,
+  .us-message h3 {
+    max-width: 360px;
+  }
+  .us-img {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .us-img img {
+    width: clamp(300px, 100%, 400px);
+  }
+  .problems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .problems > div {
+    margin: unset;
+    -ms-flex-preferred-size: 330px;
+        flex-basis: 330px;
+  }
+  .features {
+    text-align: unset;
+  }
+  .features-content {
+    margin-left: clamp(10px, 5%, 100px);
+  }
+  .features-content-reverse {
+    margin-right: clamp(10px, 100%, 100px);
+  }
+  .features div:not(:last-child) {
+    margin-bottom: 44px;
+  }
+  .features-intro {
+    text-align: center;
+  }
+  .features-intro h2 {
+    width: 650px;
+    margin-inline: auto;
+  }
+  .features-items, .features-1, .features-2, .features-3, .features-4 {
+    width: clamp(400px, 100%, 750px);
+    margin-inline: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .features-items img, .features-1 img, .features-2 img, .features-3 img, .features-4 img {
+    margin: unset;
+  }
+  .features-2, .features-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .final-cta {
+    text-align: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .final-cta-content {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: unset;
+    width: 50%;
+    padding-left: 32px;
+  }
+  .final-cta-mockup {
+    display: block;
+    width: 50%;
+    text-align: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .final-cta-mockup img {
+    max-width: 280px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
