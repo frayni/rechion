@@ -1,3 +1,191 @@
-body {
-    margin: 0.625rem;
+// Base structure
+.container {
+	margin: 0 10px;
+}
+section {
+	margin-bottom: 84px; // White space between sections
+}
+// Buttons
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	padding: 12px 24px; // Edit this style
+	border-radius: 4px;
+	font-weight: 600;
+	&__primary {
+		@extend .btn;
+		&--fill {
+			@extend .btn__primary;
+			background-color: map-get($colors, "primary");
+			color: white;
+			&:hover {
+				transition-duration: 300ms;
+				background-color: #1919b3;
+			}
+		}
+		&--opacity {
+			@extend .btn__primary;
+			background-color: rgba(36, 36, 255, 0.1);
+			color: map-get($colors, "primary");
+			transition-duration: 400ms;
+			&:hover {
+				background-color: map-get($colors, "primary");
+				color: white;
+			}
+		}
+	}
+	&__white {
+		@extend .btn;
+		&--outline {
+			@extend .btn__white;
+			border: 2px solid white;
+			color: white;
+			&:hover {
+				transition-duration: 300ms;
+				background-color: rgba(255, 255, 255, 0.2);
+			}
+		}
+	}
+}
+// Navegation
+.nav {
+	padding: 1.5rem 0.5rem;
+	&__menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		&--burger {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+
+			&-close {
+				display: none;
+			}
+			&.active {
+				.nav__menu--burger-open {
+					display: none;
+				}
+				.nav__menu--burger-close {
+					display: flex;
+					font-size: 28px;
+				}
+			}
+		}
+	}
+	&-links {
+		height: 0;
+		overflow: hidden;
+		> a {
+			cursor: pointer;
+			margin-right: 16px;
+			color: map-get($colors-basic, "black1");
+			font-weight: 500;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		> button {
+			@extend .btn__primary--opacity;
+		}
+		&.active {
+			transition: all 0.5s ease;
+			width: 100%;
+			height: auto;
+			padding-top: 12px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			> a {
+				margin: 0 0 12px 0;
+			}
+		}
+	}
+}
+// Footer
+.footer {
+    margin-top: 84px; // Space between Final CTA & footer
+	text-align: center;
+	color: white;
+	background-color: map-get($colors-basic, "black2");
+	padding: 24px 0;
+	> h2 {
+		font-size: $heading3;
+		font-weight: bold;
+	}
+	p {
+		margin: 24px 0;
+		font-size: $text;
+		font-weight: 500;
+	}
+	&-links {
+		padding: 0 20px;
+		display: flex;
+		flex-direction: column;
+		a {
+			cursor: pointer;
+			margin-bottom: 12px;
+			color: white;
+			font-size: $text-large;
+			font-weight: 500;
+		}
+		button {
+			margin-top: 12px;
+			@extend .btn__white--outline;
+		}
+	}
+}
+
+// Responsive
+@media screen and (min-width: $largeScreen) {
+	.container {
+		margin: 0 50px;
+	}
+	// Navegation
+	.nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 30px;
+		&__menu {
+			&--burger {
+				display: none;
+			}
+		}
+		&-links {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height: auto;
+		}
+	}
+    // Footer
+    .footer {
+        display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		padding: 16px 0;
+		p {
+			margin: unset;
+		}
+		&-links {
+			padding: unset;
+			flex-direction: row;
+			display: block;
+			a {
+				margin: 0 16px 0 0;
+			}
+			button {
+				margin: unset;
+			}
+		}
+    }
 }

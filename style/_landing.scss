@@ -1,0 +1,254 @@
+// Hero + nav
+.hero-nav {
+	background: linear-gradient(
+		103.73deg,
+		#f6f8fa 0%,
+		rgba(255, 255, 255, 0.5) 100%
+	);
+}
+// Hero section
+.hero {
+	text-align: center;
+	padding-bottom: 44px;
+	&-message {
+		> h1 {
+            font: bold $hero1/1.4 $font;
+            color: map-get($colors-basic, "black1");
+			span {
+				border-radius: 10px;
+				background-color: rgba(44, 124, 237, 0.1);
+				padding: 2px 8px;
+				color: map-get($colors-accent, "blue");
+			}
+		}
+		> p {
+            font: 400 $text-large $font; // the line-heigt don't work here
+            line-height: 1.6;
+			color: map-get($colors-basic, "black1");
+            margin: 24px 0;
+		}
+		&-cta {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			> a {
+				cursor: pointer;
+				opacity: 0.5;
+                font: 500 $text-large map-get($colors-basic, "black1");
+				margin-top: 16px;
+				&:hover {
+					transition-duration: 300ms;
+					opacity: 1;
+					color: map-get($colors-accent, "blue");
+				}
+				> i {
+					vertical-align: middle;
+					font-size: $heading3;
+					margin-left: 0.25rem;
+				}
+			}
+			> button {
+				@extend .btn__primary--fill;
+			}
+		}
+	}
+	&-mockup {
+		position: relative;
+		&-img {
+			width: clamp(200px, 100%, 360px);
+		}
+		&-c1 {
+			position: absolute;
+			right: 0;
+			z-index: -100;
+			filter: blur(40px);
+		}
+		&-c2 {
+			position: absolute;
+			bottom: 0;
+			z-index: -100;
+			filter: blur(30px);
+		}
+	}
+}
+// Our mission section
+.us {
+	text-align: center;
+	background-color: map-get($colors-basic, "bg3");
+	padding: 16px;
+	border-radius: 12px;
+	margin: 64px auto;
+	width: 80%;
+	&-message {
+		> h4 {
+            font: bold $text-small $font;
+			color: map-get($colors-accent, "red");
+		}
+		> h2 {
+            font: bold $heading3 $font;
+			color: map-get($colors-basic, "black1");
+			margin: 12px 0; // Space between body and subtitle
+		}
+		> p {
+            font: 400 $text-large $font;
+			line-height: 1.6;
+			color: map-get($colors-basic, "black1");
+			margin-bottom: 16px;
+		}
+		> h3 {
+            font: 500 $text $font;
+			color: map-get($colors-accent, "blue");
+			> i {
+				vertical-align: middle;
+				font-size: $heading3;
+			}
+		}
+	}
+	&-img {
+		display: none;
+	}
+}
+// Problem section
+.problems {
+	padding: 0 32px;
+	&-items {
+		> i {
+			display: inline-block;
+			border-radius: 8px;
+			background-color: rgba(44, 124, 237, 0.1);
+			padding: 10px;
+			// font-size: 24px;
+            font-size: $heading3;
+			color: map-get($colors-accent, "blue");
+		}
+		h3 {
+			color: map-get($colors-basic, "black1");
+            font: bold $heading3 $font;
+			margin: 12px 0;
+		}
+		p {
+			color: map-get($colors-basic, "black1");
+			font-size: $text;
+			line-height: 1.6;
+		}
+	}
+	> div {
+		@extend .problems-items; // space between div & problems
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+}
+// Features element
+.features {
+	background-color: map-get($colors-basic, "bg2");
+	padding: 84px 0;
+	text-align: center;
+	&-intro {
+		padding: 0 0.25rem;
+		> h4 {
+			color: map-get($colors-accent, "green");
+			font: 600 $text-small $font;
+			margin-bottom: 1rem;
+		}
+		> h2 {
+			font: bold $heading1 $font;
+			color: map-get($colors-basic, "black1");
+			margin-bottom: 24px;
+			span {
+				border-radius: 10px;
+				background-color: rgba(44, 124, 237, 0.1);
+				padding: 2px 8px;
+				color: map-get($colors-accent, "blue");
+			}
+		}
+	}
+	&-items {
+		img {
+			width: clamp(180px, 50%, 230px);
+			margin-bottom: 16px;
+		}
+		h4 {
+			color: map-get($colors, "secundary");
+			font: 600 $text $font;
+		}
+		h3 {
+			margin: 12px 0;
+            font: bold $heading3 $font;
+			color: map-get($colors-basic, "black1");
+		}
+		p {
+            font: 400 $text-large $font;
+			color: map-get($colors-basic, "black1");
+			line-height: 1.6;
+			margin-bottom: 12px;
+		}
+		ul {
+			list-style: none;
+			text-align: start;
+			> li {
+				color: map-get($colors-basic, "black1");
+				font: 400 $text $font;
+				line-height: 1.6;
+				&:not(:last-child) {
+					margin-bottom: 12px;
+				}
+				> i {
+					vertical-align: middle;
+					color: map-get($colors-accent, "blue");
+					font-size: $text-large;
+					margin-right: 8px;
+				}
+			}
+			span {
+				display: inline-block;
+				padding: 8px 12px;
+				border-radius: 8px;
+				background-color: rgba(44, 124, 237, 0.1);
+				font: bold $text-large $font;
+				color: map-get($colors-accent, "blue");
+				margin-right: 8px;
+			}
+		}
+	}
+	div {
+		&:not(:last-child) {
+			margin-bottom: 62px;
+		}
+	}
+	&-1, &-2, &-3, &-4 {
+		@extend .features-items;
+	}
+}
+// Final CTA
+.final-cta {
+	margin: 48px 0;
+	background-color: map-get($colors-basic, "bg2");
+	border-radius: 12px;
+	padding: 32px 12px;
+	text-align: center;
+	box-shadow: 4px 8px 16px rgba(44, 124, 237, 0.04);
+	&:hover {
+		transition-duration: 300ms;
+		box-shadow: 4px 8px 16px rgba(44, 124, 237, 0.08);
+	}
+	&-content {
+		h2 {
+            font: bold $hero1 $font;
+			line-height: 1.3;
+			color: map-get($colors-accent, "blue");
+			margin-bottom: 16px;
+		}
+		button {
+			@extend .btn__primary--fill;
+		}
+	}
+	&-mockup {
+		display: none;
+	}
+}
+// Responsive
+@media screen and (min-width: $largeScreen) {
+
+}
