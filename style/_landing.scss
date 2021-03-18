@@ -57,7 +57,8 @@
 	&-mockup {
 		position: relative;
 		&-img {
-			width: clamp(200px, 100%, 360px);
+			max-width: 100%;
+			height: auto;
 		}
 		&-c1 {
 			position: absolute;
@@ -155,6 +156,7 @@
 		}
 		> h2 {
 			font: bold $heading1 $font;
+			line-height: 1.4;
 			color: map-get($colors-basic, "black1");
 			margin-bottom: 24px;
 			span {
@@ -168,6 +170,7 @@
 	&-items {
 		img {
 			width: clamp(180px, 50%, 230px);
+			height: auto;
 			margin-bottom: 16px;
 		}
 		h4 {
@@ -295,24 +298,28 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 90%;
-		margin-inline: 5%;
+		width: 70%;
+		@media (min-width: 1010px) {
+			height: 220px;
+		}
 		&-message {
-			flex-basis: 50%;
+			flex-grow: 2;
 			padding-left: 32px;
-			> h4,
-			h2,
-			p,
-			h3 {
+			> h4, h2, p, h3 {
 				max-width: 360px;
 			}
 		}
 		&-img {
-			flex-basis: 50%;
-			display: flex;
-			justify-content: center;
+			flex-grow: 1;
+			display: block;
 			img {
-				width: clamp(300px, 100%, 400px);
+				@media (min-width: 1010px) {
+					position: relative;
+					bottom: 13px;
+					right: -10px;
+				}
+				width: clamp(300px, 100%, 406px);
+				height: auto;
 			}
 		}
 	}
@@ -341,7 +348,6 @@
 		&-intro {
 			text-align: center;
 			h2 {
-				width: 650px;
 				margin-inline: auto;
 			}
 		}
@@ -364,19 +370,21 @@
 	.final-cta {
 		text-align: unset;
 		display: flex;
+		height: 320px;
+		overflow: hidden;
 		&-content {
 			align-self: center;
 			margin: unset;
-			width: 50%;
+			flex-basis: 50%;
 			padding-left: 32px;
 		}
 		&-mockup {
 			display: block;
-			width: 50%;
+			flex-basis: 50%;
 			text-align: center;
-			align-self: flex-end;
 			img {
-				max-width: 280px;
+				max-width: 100%;
+				height: auto;
 			}
 		}
 	}
