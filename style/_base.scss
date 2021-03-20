@@ -5,13 +5,25 @@
 section {
 	margin-bottom: 84px; // White space between sections
 }
+img { // Prevent right-click image
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+	-webkit-touch-callout: none;
+}
+.logo { // Logo style
+	width: 100px;
+	height: auto;
+}
 // Buttons
 .btn {
 	display: inline-block;
 	cursor: pointer;
 	padding: 12px 24px; // Edit this style
 	border-radius: 4px;
-	font-weight: 600;
+	font-weight: 700;
 	text-align: center;
 	&__primary {
 		@extend .btn;
@@ -48,14 +60,6 @@ section {
 		}
 	}
 }
-img { // Prevent right-click image
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-webkit-user-drag: none;
-	-webkit-touch-callout: none;
-}
 // Navegation
 .nav {
 	padding: 1.5rem 0.5rem;
@@ -70,7 +74,6 @@ img { // Prevent right-click image
 			justify-content: center;
 			align-items: center;
 			cursor: pointer;
-
 			&-close {
 				display: none;
 			}
@@ -191,7 +194,7 @@ img { // Prevent right-click image
 		padding: 1.25rem 1rem;
 		background-color: white;
 		border-radius: 0.75rem;
-		margin: 3% auto;
+		margin: 1% auto;
 		width: 80%;
 		overflow: auto;
 		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;

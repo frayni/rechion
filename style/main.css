@@ -24,12 +24,26 @@ section {
   margin-bottom: 84px;
 }
 
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
 .btn, .btn__primary, .btn__primary--fill, .modal__card--form div button, .hero-message-cta > button, .final-cta-content button, .btn__primary--opacity, .nav-links > button, .btn__white, .btn__white--outline, .footer-links button {
   display: inline-block;
   cursor: pointer;
   padding: 12px 24px;
   border-radius: 4px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -65,15 +79,6 @@ section {
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
   background-color: rgba(255, 255, 255, 0.2);
-}
-
-img {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-user-drag: none;
-  -webkit-touch-callout: none;
 }
 
 .nav {
@@ -261,7 +266,7 @@ img {
   padding: 1.25rem 1rem;
   background-color: white;
   border-radius: 0.75rem;
-  margin: 3% auto;
+  margin: 1% auto;
   width: 80%;
   overflow: auto;
   -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
@@ -517,21 +522,24 @@ img {
   margin-bottom: 16px;
 }
 
-.us-message > h3 {
-  font: 500 1rem inter;
-  color: #2C7CED;
-}
-
-.us-message > h3 > i {
-  vertical-align: middle;
-  font-size: clamp(1.5rem, 5vw, 1.75rem);
-}
-
 .us-img {
   display: none;
 }
 
+#problems > h2 {
+  text-align: center;
+  margin-bottom: 62px;
+  font: 700 1rem inter;
+  color: #2C7CED;
+}
+
+#problems > h2 > i {
+  vertical-align: middle;
+  font-size: clamp(1.5rem, 5vw, 1.75rem);
+}
+
 .problems {
+  text-align: center;
   padding: 0 32px;
 }
 
@@ -626,7 +634,7 @@ img {
 }
 
 .features-items ul > li:not(:last-child), .features-1 ul > li:not(:last-child), .features-2 ul > li:not(:last-child), .features-3 ul > li:not(:last-child), .features-4 ul > li:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .features-items ul > li > i, .features-1 ul > li > i, .features-2 ul > li > i, .features-3 ul > li > i, .features-4 ul > li > i {
@@ -789,6 +797,7 @@ img {
 
 @media screen and (min-width: 668px) {
   .problems {
+    text-align: start;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -98,21 +98,26 @@
 			color: map-get($colors-basic, "black1");
 			margin-bottom: 16px;
 		}
-		> h3 {
-            font: 500 $text $font;
-			color: map-get($colors-accent, "blue");
-			> i {
-				vertical-align: middle;
-				font-size: $heading3;
-			}
-		}
 	}
 	&-img {
 		display: none;
 	}
 }
 // Problem section
+#problems {
+	> h2 {
+		text-align: center;
+		margin-bottom: 62px;
+		font: 700 $text $font;
+		color: map-get($colors-accent, "blue");
+		> i {
+			vertical-align: middle;
+			font-size: $heading3;
+		}
+	}
+}
 .problems {
+	text-align: center;
 	padding: 0 32px;
 	&-items {
 		> i {
@@ -196,7 +201,7 @@
 				font: 400 $text $font;
 				line-height: 1.6;
 				&:not(:last-child) {
-					margin-bottom: 12px;
+					margin-bottom: 16px;
 				}
 				> i {
 					vertical-align: middle;
@@ -324,6 +329,7 @@
 		}
 	}
 	.problems {
+		text-align: start;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
