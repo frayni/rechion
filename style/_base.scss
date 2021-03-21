@@ -135,6 +135,23 @@ img { // Prevent right-click image
 		font-size: $text;
 		font-weight: 500;
 	}
+	&-social {
+		img {
+			margin: 0 0 12px 0;
+		}
+		a {
+			cursor: pointer;
+			color: white;
+			font-size: 24px;
+			&:hover {
+				transition-duration: 300ms;
+				opacity: 0.6;
+			}
+			&:not(:last-child) {
+				margin-right: 4px;
+			}
+		}
+	}
 	&-links {
 		padding: 0 20px;
 		display: flex;
@@ -145,6 +162,10 @@ img { // Prevent right-click image
 			color: white;
 			font-size: $text-large;
 			font-weight: 500;
+			&:hover {
+				transition-duration: 300ms;
+				opacity: 0.6;
+			}
 		}
 		button {
 			margin-top: 12px;
@@ -221,7 +242,7 @@ img { // Prevent right-click image
 				input[type="radio"] {
 					background-color: initial;
 					cursor: default;
-					appearance: auto;
+					appearance: radio;
 					margin-right: 0.25rem;
 					width: 1rem;
 					height: 1rem;
@@ -283,9 +304,16 @@ img { // Prevent right-click image
 		p {
 			margin: unset;
 		}
+		&-social {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			img {
+				margin: 0 16px 0 0;
+			}
+		}
 		&-links {
 			padding: unset;
-			flex-direction: row;
 			display: block;
 			a {
 				margin: 0 16px 0 0;

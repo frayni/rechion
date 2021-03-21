@@ -194,6 +194,26 @@ img {
   font-weight: 500;
 }
 
+.footer-social img {
+  margin: 0 0 12px 0;
+}
+
+.footer-social a {
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+
+.footer-social a:hover {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  opacity: 0.6;
+}
+
+.footer-social a:not(:last-child) {
+  margin-right: 4px;
+}
+
 .footer-links {
   padding: 0 20px;
   display: -webkit-box;
@@ -211,6 +231,12 @@ img {
   color: white;
   font-size: 18px;
   font-weight: 500;
+}
+
+.footer-links a:hover {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  opacity: 0.6;
 }
 
 .footer-links button {
@@ -297,9 +323,9 @@ img {
 .modal__card--form fieldset input[type="radio"] {
   background-color: initial;
   cursor: default;
-  -webkit-appearance: auto;
-     -moz-appearance: auto;
-          appearance: auto;
+  -webkit-appearance: radio;
+     -moz-appearance: radio;
+          appearance: radio;
   margin-right: 0.25rem;
   width: 1rem;
   height: 1rem;
@@ -386,12 +412,23 @@ img {
   .footer p {
     margin: unset;
   }
-  .footer-links {
-    padding: unset;
+  .footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-social img {
+    margin: 0 16px 0 0;
+  }
+  .footer-links {
+    padding: unset;
     display: block;
   }
   .footer-links a {
